@@ -17,7 +17,7 @@ public class TantoCuoreOriginalDeck extends Deck implements java.io.Serializable
      * Hardcoded list. TODO: Move this list to an xml or other external resource.
      * @return
      */
-    private ArrayList<Card> InitializeDeck()
+    private static ArrayList<Card> InitializeDeck()
     {
         return new ArrayList<Card>() {{
             add(new Card("Rogue Crescent", "Chamebermaid", ".", 2, 1));
@@ -33,5 +33,10 @@ public class TantoCuoreOriginalDeck extends Deck implements java.io.Serializable
             add(new Card("Anise Greenaway", "Treasury Maid", ".", 7, 3));
             add(new Card("Sainsbury Lockwood", "Laundry Maid", ".", 5, 0));
         }};
+    }
+
+    public static ArrayList<Card> GetCopyOfAllCards()
+    {
+        return InitializeDeck();
     }
 }

@@ -21,6 +21,10 @@
             android:label="@string/app_name"
             android:name=".ShuffledListActivity">
         </activity>
+        <activity
+            android:label="Filter"
+            android:name=".FilterListActivity">
+        </activity>
     </application>
 
 </manifest>

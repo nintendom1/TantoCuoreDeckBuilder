@@ -19,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
 
     //UI Elements
     Button shuffleButton;
+    Button filterButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +34,14 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(context, ShuffledListActivity.class);
                 intent.putExtra("Deck", ShuffleCards());
+                startActivity(intent);
+            }
+        });
+        filterButton = (Button) findViewById(R.id.filterButton);
+        filterButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(context, FilterListActivity.class);
                 startActivity(intent);
             }
         });
